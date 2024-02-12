@@ -2,6 +2,17 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import img1 from "../public/patrick.gif";
+import img2 from "../public/designer.gif";
+import img3 from "../public/please1.gif";
+import img4 from "../public/please2.gif";
+import img5 from "../public/annoyed1.gif";
+import img6 from "../public/annoyed2.gif";
+import img7 from "../public/annoyed3.gif";
+import img8 from "../public/mad1.gif";
+import img9 from "../public/mad2.gif";
+
+
 
 const prompts = ["Hehe ily <3",
                  "Will you be my valentine?",
@@ -14,16 +25,7 @@ const prompts = ["Hehe ily <3",
                  "Don't be so cold",
                  "Last chance!"]
 
-const images = ["/patrick.gif",
-                "/designer.gif",
-                "/please1.gif",
-                "/please2.gif",
-                "/annoyed1.gif",
-                "/annoyed2.gif",
-                "/annoyed3.gif",
-                "/mad1.gif",
-                "/mad2.gif",
-                "/mad3.gif"]
+const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9]
 
 const topPos = ["top-[11%]", "top-[22%]", "top-[33%]", "top-[44%]", "top-[55%]", "top-[66%]", "top-[77%]", "top-[88%]"]
 const rightPos = ["right-[11%]", "right-[22%]", "right-[33%]", "right-[44%]", "right-[55%]", "right-[66%]", "right-[77%]", "right-[88%]"]
@@ -64,7 +66,7 @@ export default function Home() {
     <main className="bg-[url(/heart-bg.png)]">
       <div className="w-screen h-screen flex flex-col justify-center items-center gap-8">
         <div className="h-[300px] w-[400px] relative">
-          <Image src={image} alt="" fill sizes="100vw" className="object-contain"/>
+          <Image src={image} alt="" fill sizes="100vw" className="object-contain" priority/>
         </div>
         <h1 className="text-3xl font-semibold">{prompt}</h1>
         {showButtons && 
