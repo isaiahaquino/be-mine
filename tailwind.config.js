@@ -7,11 +7,20 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      keyframes: {
+        moveX: {
+          from: { left: 200 },
+          to: { left: 1200 }
+        },
+        moveY: {
+          from: { top: 100 },
+          to: { top: 600 }
+        }
       },
+      animation: {
+        'run': 'moveX 6s linear 0s infinite alternate, moveY 8s linear 0s infinite alternate',
+        'runFast' : 'moveX 2s linear 0s infinite alternate, moveY 3s linear 0s infinite alternate'
+      }
     },
   },
   plugins: [],
